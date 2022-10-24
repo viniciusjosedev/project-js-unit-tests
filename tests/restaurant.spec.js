@@ -53,13 +53,14 @@ const createMenu = require('../src/restaurant');
 */
 
 describe('10 - Implemente a função `createMenu`, bem como seus casos de teste', () => {
-  it('Verifica se a função `createMenu` tem o comportamento esperado', () => {
-    fail('Teste vazio!');
-    // TESTE 1: Verifique se função `createMenu()` retorna um objeto que possui a chave `fetchMenu`, a qual tem como valor uma função.
-    // ```
-    // const objetoRetornado = createMenu(); // Retorno: { fetchMenu: () => {}, ... }
-    // ```
-    // TESTE 2: Verifique se 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`, 
+  it('Verifique se função `createMenu()` retorna um objeto que possui a chave `fetchMenu`, a qual tem como valor uma função.', () => {
+		const name = 'teste'
+		expect(Object.keys(createMenu(name))[0]).toEqual('fetchMenu')
+	});
+  // it("Verifique se 'objetoRetornado.fetchMenu()' retorna um objeto cujas chaves são somente `food` e `drink`", () => {
+	// 	expect()
+	// });
+// 	}); 
     // considerando que a função createMenu() foi chamada com o objeto: `{ food: {}, drink: {} }`.
     // ```
     // const objetoRetornado = createMenu({ food: {}, drink: {} });
@@ -74,7 +75,9 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // Agora faça o PASSO 1 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
 
-    // TESTE 4: Verifique se 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.
+    // it("Verifique se 'objetoRetornado.consumption', após a criação do menu, retorna um array vazio.", () => {
+		// 	expect(createMenu().consumption).toEqual({})
+		// })
     // ```
     // const objetoRetornado = createMenu(objetoQualquer);
     // objetoRetornado.consumption // Retorno: []
@@ -127,5 +130,6 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // ```
   
     // Agora faça o PASSO 4 no arquivo `src/restaurant.js`.
-  });
 });
+
+
