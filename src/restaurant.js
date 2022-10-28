@@ -112,9 +112,4 @@ const createMenu = (objeto) => {
   return menu;
 };
 
-const teste = createMenu();
-const testeResultado = teste['order'](['coxinha', 'pastel', 'caldo de cana']);
-console.log(teste)
-
-
 module.exports = createMenu;
