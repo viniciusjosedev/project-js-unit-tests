@@ -99,8 +99,10 @@ const menu = {};
   
 // }
 
+const funcMap = (elemento) => menu.consumption.push(elemento);
+
 const addOrder = (palavra) => {
-  menu.consumption.push(palavra);
+  palavra.map(funcMap);
 };
 
 const createMenu = (objeto) => {
@@ -109,5 +111,10 @@ const createMenu = (objeto) => {
   menu.order = addOrder;
   return menu;
 };
+
+const teste = createMenu();
+const testeResultado = teste['order'](['coxinha', 'pastel', 'caldo de cana']);
+console.log(teste)
+
 
 module.exports = createMenu;

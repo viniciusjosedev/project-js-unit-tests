@@ -87,8 +87,8 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // --------------------------------------------------------------------------------------
 
     it("Verifique se, ao chamar uma função associada à chave `order` no objeto retornado, passando uma string como parâmetro (como `objetoRetornado.order('coxinha')`), tal string é adicionada ao array retornado em `objetoRetornado.consumption", () => {
-			const teste = createMenu()
-			const teste2 = teste['order']('coxinha')
+			const teste = createMenu();
+			const testeResultado = teste['order'](['coxinha']);
 
 			expect(teste['consumption']).toEqual(['coxinha'])
 		});
@@ -101,7 +101,12 @@ describe('10 - Implemente a função `createMenu`, bem como seus casos de teste'
     // Agora faça o PASSO 3 no arquivo `src/restaurant.js`.
     // --------------------------------------------------------------------------------------
 
-    // TESTE 6: Verifique se, ao adicionar três pedidos, dentre bebidas e comidas, o array `objetoRetornado.consumption` contém os itens pedidos.
+    it("Verifique se, ao adicionar três pedidos, dentre bebidas e comidas, o array `objetoRetornado.consumption` contém os itens pedidos.", () => {
+			const teste = createMenu();
+			const testeResultado = teste['order'](['coxinha', 'pastel', 'caldo de cana']);
+
+			expect(teste['consumption']).toEqual(['coxinha', 'pastel', 'caldo de cana'])
+		})
     // ```
     // objetoRetornado.order("coxinha");
     // objetoRetornado.order("agua");
