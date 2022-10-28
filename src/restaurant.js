@@ -99,9 +99,14 @@ const menu = {};
   
 // }
 
+const addOrder = (palavra) => {
+  menu.consumption.push(palavra);
+};
+
 const createMenu = (objeto) => {
   menu.fetchMenu = () => objeto;
   menu.consumption = [];
+  menu.order = addOrder;
   return menu;
 };
 
